@@ -1,0 +1,65 @@
+<!-- <login></login> -->
+<div class="bkg">
+
+
+    <!-- <h1>Online Plant Nursery</h1> -->
+    <div *ngIf="LoggedOut" class="loginform">
+        <div class="w3-display-middle w3-margin-top w3-center">
+            <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-max"><b>Online Plant
+                        Nursery
+                    </b></span> </h1>
+            <br>
+            <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+                <!-- <div class="card card-signin my-5"> -->
+                <div class="card-body">
+                    <br>
+                    <!-- <h5 class="card-title text-center">Sign In</h5> -->
+                    <form class="form-signin" #signInForm="ngForm" (ngSubmit)="signInUser(signInForm.value)">
+
+                        <!-- {{signInForm.value | json}} -->
+                        <div class="form-label-group">
+                            <label style="text-align: center; color: white;" for="inputEmail">Admin Name : </label>
+                            <input type="text" class="form-control" placeholder="Admin Name" name="adminName"
+                                [(ngModel)]=adminName required>
+                            <em *ngIf="signInForm.controls.adminName?.invalid && (signInForm.controls.adminName?.touched)"
+                                style="font-size: medium; color:  white;"> Admin Name can't be empty</em>
+                        </div>
+
+                        <div class="form-label-group">
+                            <label style="text-align: center; color: white;" for="inputPassword">Password : </label>
+                            <em id="errName" style="color:  white; font-size: large;"></em>
+                            <input type="password" class="form-control" placeholder="Enter Password" name="password"
+                                [(ngModel)]=password required>
+
+
+                            <em *ngIf="signInForm.controls.password?.invalid && (signInForm.controls.password?.touched)"
+                                style="font-size: medium; color: white"> Password can't be empty. Minimum Lenght is
+                                8</em>
+
+
+                        </div>
+                        <br>
+
+                        <button class="btn btn-lg btn-primary  text-uppercase" type="submit" style="align-self: center;"
+                            [disabled]="!signInForm.valid">Sign In</button>
+                        <!-- <button class="btn btn-lg  btn-block text-uppercase"  [routerLink]="['/registration']">Sign Up</button> -->
+                        <hr class="my-4">
+
+                    </form>
+                    <br>
+                    <br>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <div *ngIf="LoggedIn">
+
+        <router-outlet></router-outlet>
+    </div>
+    <!-- <a [routerLink]="['/login']" class="btn btn-link">Sign In</a>  -->
+    <!-- <router-outlet></router-outlet> -->

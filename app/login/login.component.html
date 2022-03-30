@@ -1,0 +1,154 @@
+<body>
+    <div class="jumbotron text-center" style="margin-bottom:0%">
+        <h1>Online Plant Nursery</h1>
+         </div>
+    <div class="jumbotron text center">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5" >
+            <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+            <form class="form-signin" #signInForm ="ngForm" (ngSubmit)="signInUser(signInForm.value)">
+
+                <!-- {{signInForm.value | json}} -->
+                <div class="header">
+        
+                  
+                    
+             
+                    
+                </div>
+                
+                <div class="sep"></div>
+        
+                <div class="inputs">
+                
+                  <div class="form-label-group" >
+                        <label style="text-align: center;" for="inputEmail">Admin Name : </label> 
+                        <input type="text"  class="form-control" placeholder="Admin Name"name="adminName" [(ngModel)]=adminName required autofocus >
+                        </div>
+                
+                    <div class="form-label-group">
+                            <label style="text-align: center;" for="inputPassword">password : </label> 
+                            <input type="password"  class="form-control" placeholder="enter password"name="password" [(ngModel)]=password required autofocus>
+                        </div><br>
+                    
+                    <div class="checkboxy">
+                        <input name="cecky" id="checky" value="1" type="checkbox" /><label class="terms">I accept the terms of use</label>
+                    </div>
+                    
+                    <button class="btn btn-primary  btn-block text-uppercase" type="submit" [disabled]="!signInForm.valid" >Sign In</button>
+                
+                </div>
+            
+            </form>
+            
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <router-outlet></router-outlet>
+</body>
+
+
+
+
+<!-- <div class="container">
+
+    <form id="signup">
+
+        <div class="header">
+        
+            <h3>Sign Up</h3>
+            
+            <p>You want to fill out this form</p>
+            
+        </div>
+        
+        <div class="sep"></div>
+
+        <div class="inputs">
+        
+          <div class="form-label-group" >
+                <label style="text-align: center;" for="inputEmail">Admin Name : </label> 
+                <input type="text"  class="form-control" placeholder="Admin Name"name="adminName" [(ngModel)]=adminName required autofocus>
+                </div>
+        
+            <div class="form-label-group">
+                    <label style="text-align: center;" for="inputPassword">password : </label> 
+                    <input type="password"  class="form-control" placeholder="enter password"name="password" [(ngModel)]=password required autofocus>
+                </div><br>
+            
+            <div class="checkboxy">
+                <input name="cecky" id="checky" value="1" type="checkbox" /><label class="terms">I accept the terms of use</label>
+            </div>
+            
+            <button class="btn btn-primary  btn-block text-uppercase" type="submit" [disabled]="!signInForm.valid" >Sign In</button>
+        
+        </div>
+
+    </form>
+
+</div> -->
+​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <body>
+    
+  <div class="jumbotron text center">
+  <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+          <div class="card-body">
+          <h5 class="card-title text-center">Sign In</h5>
+          <form class="form-signin" #signInForm ="ngForm" (ngSubmit)="signInAdmin(signInForm.value)">
+
+              {{signInForm.value | json}}
+              <div class="form-label-group">
+              <label style="text-align: center;" for="inputEmail">Admin Name : </label> 
+              <input type="text"  class="form-control" placeholder="Admin Name"name="adminName" [(ngModel)]=adminName required >
+              </div>
+
+              <div class="form-label-group">
+                  <label style="text-align: center;" for="inputPassword">password : </label> 
+                  <input type="password"  class="form-control" placeholder="Enter Password"name="password" [(ngModel)]=password required >
+              </div>
+
+              <button class="btn btn-lg  btn-block text-uppercase" type="submit" [disabled]="!signInForm.valid" >Sign In</button>
+              <!-- <button class="btn btn-lg  btn-block text-uppercase"  [routerLink]="['/registration']">Sign Up</button> -->
+              <!-- <hr class="my-4"> -->
+          
+          <!-- </form>
+          
+          </div>
+      </div>
+      </div>
+  </div>
+  </div>
+  <router-outlet></router-outlet>
+</body> --> -->

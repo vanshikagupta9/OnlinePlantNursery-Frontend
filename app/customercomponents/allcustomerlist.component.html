@@ -1,0 +1,17 @@
+<div class="well hoverwell thumbnail py-3 my-3">
+    <h2> Id   : {{customerdata.customerid}}  </h2>
+    <div> Name : {{customerdata.customerName}} </div>>
+    <div>Email   : {{customerdata.customeremail}} </div>
+    <div>houseNo   : {{customerdata.houseNo}} </div>
+    <div>colony   : {{customerdata.customerid}} </div>
+    <div>city   : {{customerdata.city}} </div>
+    
+    <div *ngIf="customerdata?.imageUrl">
+    image URL : <img [src]=customerdata.imageUrl width="50px">
+    </div>    
+    <div>
+        <span> <input type="text" value="Hello" (keypress) = "myFunction()"></span><br/>
+        <span> <button [class]=buttonStyle (click)="onButtonClick()"> View Details </button></span>
+    </div>
+</div>
+</div>

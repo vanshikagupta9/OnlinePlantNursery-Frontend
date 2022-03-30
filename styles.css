@@ -1,0 +1,48 @@
+/* @import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    background-color: rgb(177, 226, 121);
+};
+.hoverwell:hover{
+    background-color: green;
+    cursor: pointer;
+}
+.pointable{
+    cursor:pointer;
+} */
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+  
+    background-image: url('./assets/image/4.jpg');
+    /* position: fixed; */
+    width: 100%;
+    height: 110%;
+    background-repeat: no-repeat; 
+    /* background-color:rgb(135, 138, 145); */
+}
+
+.hoverwell:hover {
+    background-color: #d9f39d;;
+    cursor: pointer;
+  }
+  
+ .well{
+    background-color: #95fafa;
+  }
+  .container {
+    padding-top: 10px;
+  }
+  
+  .pointable {
+    cursor: pointer;
+  }
+  
+  button {
+    color: rgb(119, 252, 185);
+  }
+  
+  [hidden] {
+    display: none !important;
+  }
